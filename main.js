@@ -3,6 +3,7 @@ const busqueda = document.getElementById("button");
 const clima = document.getElementById("clima");
 const detalleClima = document.getElementById("detalleClima");
 const error404 = document.getElementById("invalido");
+const pais = document.getElementById("pais");
 
 busqueda.addEventListener('click', () => {
 
@@ -17,11 +18,11 @@ busqueda.addEventListener('click', () => {
         .then(json => {
 
             if (json.cod === '404') {
-                // container.style.height = '400px';
-                // weatherBox.style.display = 'none';
-                // weatherDetails.style.display = 'none';
-                // error404.style.display = 'block';
-                // error404.classList.add('fadeIn');
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Dato Inválido',
+                    text: 'El país o la localidad es inválida. Por favor, vuelva a ingresarlo.',
+                })
                 return;
             }
 
@@ -59,10 +60,13 @@ busqueda.addEventListener('click', () => {
                     imagen.src = '';
             }
 
-            temperatura.innerHTML = `${parseInt(json.main.temp)}<span>°C</span>`;
+            pais.innerHTML = `${json.name} , ${json.sys.country} `;
+            temperatura.innerHTML = `${parseInt(json.main.temp)}<span> °C</span>`;
             descripcion.innerHTML = `${json.weather[0].description}`;
             humedad.innerHTML = `${json.main.humidity}%`;
             viento.innerHTML = `${parseInt(json.wind.speed)}Km/h`;
+
+            console.log(json)
 
             // weatherBox.style.display = '';
             // weatherDetails.style.display = '';
