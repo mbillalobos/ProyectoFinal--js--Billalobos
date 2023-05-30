@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyecto Final - Manuel Ignacio Billalobos</title>
+    <!-- LINK DE FUENTES -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap" rel="stylesheet">
+    <!-- LINK DE BOOTSTRAP -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <!-- LINK DE CSS-->
+    <link rel="stylesheet" href="./css/estilos.css">
+
+</head>
+
+<body>
+
+    <div class="container" id="contenedor">
+        <div class="input-group mb-3 mt-4 align-items-center justify-content-center" id="busqueda">
+            <div class="input-group-prepend">
+                <i class="fas fa-map-marker-alt m-3"></i>
+            </div>
+            <div class="col-5">
+                <input type="text" class="form-control" placeholder="Ingrese su localidad..." aria-label="" aria-describedby="basic-addon1"
+                    id="input">
+            </div>
+            <div class="col-1">
+                <button class="btn btn-secondary fas fa-search m-3" id="button"></button>
+            </div>
+        </div>
+
+        <div class="invalido d-none" id="invalido">
+            <img class="" src="img/invalido.png" alt="">
+            <p>La localidad que ingresaste no es válida.</p>
+        </div>
+
+        <div class="row">
+            <div class="col-6 mx-auto clima justify-content-center" id="clima">
+                <img class="mx-auto pb-2 img-fluid" src="" alt="">
+                <p class="temperatura text-center" id="temperatura"></p>
+                <p class="descripcion text-center" id="descripcion"></p>
+            </div>
+        </div>
+
+        <div class="detalleClima row" id="detalleClima">
+            <div class="col humedad text-center">
+                <i class="fas fa-water"></i>
+                <div class="texto">
+                    <span></span>
+                    <p>Humedad</p>
+                </div>
+            </div>
+            <div class="col viento text-center">
+                <i class="fas fa-wind"></i>
+                <div class="texto text-center">
+                    <span></span>
+                    <p>Velocidad del viento</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!--SCRIPT PARA BOOTSTRAP-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+        crossorigin="anonymous"></script>
+
+    <!--SCRIPT PARA FONTAWESOME-->
+    <script src="https://kit.fontawesome.com/2f93878564.js" crossorigin="anonymous"></script>
+
+    <!--SCRIPT PARA JS-->
+    <script src="main.js"></script>
+
+</body>
+
+</html>

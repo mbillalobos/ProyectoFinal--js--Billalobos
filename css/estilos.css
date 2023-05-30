@@ -1,0 +1,19 @@
+body{
+    font-family: 'Lato', sans-serif;
+    background-color: lightblue;
+}
+
+.container {
+    background-color: white;
+    border-radius: 15px;
+}
+
+.clima img{
+    width: 250px;
+    display: flex;
+    align-items: center;
+}
+
+.descripcion {
+    text-transform: uppercase;
+}
