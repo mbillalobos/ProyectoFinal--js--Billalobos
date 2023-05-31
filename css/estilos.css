@@ -1,4 +1,4 @@
-body{
+body {
     font-family: 'Lato', sans-serif;
     background-color: lightblue;
 }
@@ -8,12 +8,83 @@ body{
     border-radius: 15px;
 }
 
-.clima img{
-    width: 250px;
+.clima img {
+    width: 230px;
     display: flex;
     align-items: center;
 }
 
-.descripcion {
-    text-transform: uppercase;
+.descripcion,
+.temperatura {
+    text-transform: capitalize;
+    font-size: 1.5rem;
+    font-weight: bolder;
+}
+
+.humedad,
+.viento {
+    font-size: 1.2rem;
+    font-weight: bolder;
+}
+
+.pais {
+    font-size: 2rem;
+    font-weight: bolder;
+}
+
+input {
+    height: 40px;
+    font-size: 1.2rem !important;
+    border: 0px !important;
+}
+
+input:focus{
+    border: 0px !important;
+}
+
+.seccionContacto {
+    padding: 0px;
+    margin: 0px;
+}
+
+footer {
+    background-color: white;
+    position: fixed;
+    bottom: 0px;
+    right: 0px;
+    left: 0px;
+}
+
+.fa-map-marker-alt,
+.fa-search{
+    font-size: 1.2rem;
+}
+
+.fa-facebook-f,
+.fa-github,
+.fa-instagram,
+.fa-linkedin,
+.fa-envelope-open {
+    transition: all 0.3s;
+    font-size: 2rem;
+}
+
+.fa-facebook-f:hover {
+    color: #3b5998;
+}
+
+.fa-instagram:hover {
+    color: #3f729b;
+}
+
+.fa-linkedin:hover {
+    color: #0e76a8;
+}
+
+.fa-github:hover {
+    color: #171515;
+}
+
+.fa-envelope-open:hover {
+    color: #171515;
 }

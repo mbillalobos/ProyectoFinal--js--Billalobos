@@ -10,9 +10,6 @@ busqueda.addEventListener('click', () => {
     const APIKey = 'c662d9fb59d73f57a003479f5012fa79';
     const city = document.getElementById("input").value;
 
-    if (city === '')
-        return;
-
     fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${APIKey}&lang=sp`)
         .then(response => response.json())
         .then(json => {
@@ -25,9 +22,6 @@ busqueda.addEventListener('click', () => {
                 })
                 return;
             }
-
-            error404.style.display = 'none';
-            error404.classList.remove('fadeIn');
 
             const imagen = document.querySelector('.clima img');
             const temperatura = document.querySelector('.clima .temperatura');
@@ -60,22 +54,11 @@ busqueda.addEventListener('click', () => {
                     imagen.src = '';
             }
 
-            pais.innerHTML = `${json.name} , ${json.sys.country} `;
+            pais.innerHTML = `${json.name}, ${json.sys.country} `;
             temperatura.innerHTML = `${parseInt(json.main.temp)}<span> °C</span>`;
             descripcion.innerHTML = `${json.weather[0].description}`;
             humedad.innerHTML = `${json.main.humidity}%`;
             viento.innerHTML = `${parseInt(json.wind.speed)}Km/h`;
-
-            console.log(json)
-
-            // weatherBox.style.display = '';
-            // weatherDetails.style.display = '';
-            // weatherBox.classList.add('fadeIn');
-            // weatherDetails.classList.add('fadeIn');
-            // container.style.height = '590px';
-
-
         });
-
 
 });
