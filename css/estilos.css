@@ -60,21 +60,10 @@ footer {
     font-size: 1.2rem;
 }
 
-.fa-facebook-f,
 .fa-github,
-.fa-instagram,
-.fa-linkedin,
-.fa-envelope-open {
+.fa-linkedin, {
     transition: all 0.3s;
     font-size: 2rem;
-}
-
-.fa-facebook-f:hover {
-    color: #3b5998;
-}
-
-.fa-instagram:hover {
-    color: #3f729b;
 }
 
 .fa-linkedin:hover {
@@ -82,9 +71,5 @@ footer {
 }
 
 .fa-github:hover {
-    color: #171515;
-}
-
-.fa-envelope-open:hover {
     color: #171515;
 }
